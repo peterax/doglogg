@@ -3,6 +3,8 @@
 sudo modprobe w1-gpio
 sudo modprobe w1-therm
 
+git config --global user.email "peter@reducks.se"
+git config --global user.name "Peter Axelsson"
 
 # Fix a cronjob
 sudo crontab -l > mycron
