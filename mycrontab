@@ -20,5 +20,4 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-*/2.5 * * * *           /home/pi/rrddata/get_temp.sh
-* * * * *           export LANG=sv_SE.utf8 && perl /home/pi/rrddata/graph_temp.pl
+* * * * *           /home/pi/doglogg/get_temp.sh
