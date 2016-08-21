@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/doglogg
+cd /home/pi/doglogg
 git pull --no-edit
 
 
