@@ -1,9 +1,5 @@
 #!/bin/bash
-if ls &>/dev/null;
-then
+cd ~/doglogg
+git pull --no-edit
 
-echo "ja"
-else
-echo "nej"
-fi
 
