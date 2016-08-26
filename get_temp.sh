@@ -8,7 +8,7 @@ if ls /sys/bus/w1/devices/28*/w1_slave &>/dev/null; then
 	# Get sensors id
 	SensorId=`ls /sys/bus/w1/devices/28*/w1_slave|cut -f6 -d'/'`
 
-
+	# Save data
 	wget -q -O/dev/null "http://www.doglogg.se/savedata.php?id=$SensorId&data=$OutsideTemp"
 
 	echo $SensorId  $OutsideTemp
