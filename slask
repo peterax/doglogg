@@ -1,6 +1,0 @@
-create_rrd.sh
-get_temp.sh
-graph_temp.pl
-mycrontab
-outside_temp.rrd
-slask
