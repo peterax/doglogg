@@ -11,6 +11,8 @@ if ls /sys/bus/w1/devices/28*/w1_slave &>/dev/null; then
 	# Save data
 	wget -q -O/dev/null "http://www.doglogg.se/savedata.php?id=$SensorId&data=$OutsideTemp"
 
+    # wget -q -O/dev/null  "http://api.thingspeak.com/update?api_key=RKDFIP1P1VM72FE7&field1=$OutsideTemp&field2=$SensorId"
+
 	echo $SensorId  $OutsideTemp
 else
 	echo "No data found!"
