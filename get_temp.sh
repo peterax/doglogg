@@ -10,9 +10,11 @@ if ls /sys/bus/w1/devices/28*/w1_slave &>/dev/null; then
 
 	# Get pi cpu serno
 	cpuSerialNo=`cat /proc/cpuinfo | grep Serial | cut -d ':' -f 2`
+ 	# Get pi hw revision
+        hwRevision=`cat /proc/cpuinfo | grep Revision | cut -d ':' -f 2`
 
 	# Save data
-	wget -q -O/dev/null "http://www.doglogg.se/doglogg_save.php?id=$SensorId&data=$OutsideTemp&user=$cpuSerialNo"
+	wget -q -O/dev/null "http://www.doglogg.se/doglogg_save.php?id=$SensorId&data=$OutsideTemp&user=$hwRevision-$cpuSerialNo"
 
     # wget -q -O/dev/null  "http://api.thingspeak.com/update?api_key=RKDFIP1P1VM72FE7&field1=$OutsideTemp&field2=$SensorId"
 
