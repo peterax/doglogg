@@ -9,9 +9,9 @@ if ls /sys/bus/w1/devices/28*/w1_slave &>/dev/null; then
 	SensorId=`ls /sys/bus/w1/devices/28*/w1_slave|cut -f6 -d'/'`
 
 	# Get pi cpu serno
-	cpuSerialNo=`cat /proc/cpuinfo | grep Serial | cut -d ':' -f 2`
+	cpuSerialNo=`cat /proc/cpuinfo | grep Serial | cut -d ':' -f 2 | cut -d ' ' -f 2`
  	# Get pi hw revision
-        hwRevision=`cat /proc/cpuinfo | grep Revision | cut -d ':' -f 2`
+        hwRevision=`cat /proc/cpuinfo | grep Revision | cut -d ':' -f 2 | cut -d ' ' -f 2`
 
 	# Save data
 	wget -q -O/dev/null "http://www.doglogg.se/doglogg_save.php?id=$SensorId&data=$OutsideTemp&user=$hwRevision-$cpuSerialNo"
