@@ -1,7 +1,7 @@
 #!/bin/bash
 createTunnel() {
 
-  /usr/bin/ssh -i /home/pi/doglogg/id_rsa -N -R $idno:localhost:22 pi@peterax.sjobyn.se -p 22001 &
+  /usr/bin/ssh -i /home/pi/doglogg/id_rsa -N -R $idno:localhost:22 pi@peterax.sjobyn.se -p 22001  -o StrictHostKeyChecking=no &
 
   if [[ $? -eq 0 ]]; then
     echo Tunnel to jumpbox created successfully
