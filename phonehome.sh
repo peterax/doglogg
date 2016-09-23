@@ -1,11 +1,7 @@
 #!/bin/bash
 createTunnel() {
-  # is there a key?
-  if ! ls /home/pi/.ssh/id_rsa &>/dev/null; then
-	echo -e "\n\n\n" | ssh-keygen
-	ssh-copy-id -i /home/pi/.ssh/id_rsa.pub -p 22001 pi@peterax.sjobyn.se
-  fi
-  /usr/bin/ssh -i /home/pi/.ssh/id_rsa -N -R $idno:localhost:22 pi@peterax.sjobyn.se -p 22001 &
+
+  /usr/bin/ssh -i /home/pi/doglogg/id_rsa -N -R $idno:localhost:22 pi@peterax.sjobyn.se -p 22001 &
 
   if [[ $? -eq 0 ]]; then
     echo Tunnel to jumpbox created successfully
