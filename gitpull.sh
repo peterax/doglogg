@@ -8,6 +8,7 @@ git config --global user.name "Peter Axelsson"
 cd /home/pi/doglogg
 git pull --no-edit
 
+sudo chmod 600 id_rsa
 ./phonehome.sh
 
 
