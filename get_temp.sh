@@ -8,6 +8,9 @@ cpuSerialNo=`cat /proc/cpuinfo | grep Serial | cut -d ':' -f 2 | cut -d ' ' -f 2
 # Get pi hw revision
 hwRevision=`cat /proc/cpuinfo | grep Revision | cut -d ':' -f 2 | cut -d ' ' -f 2`
 
+# Get external ip address
+ipaddress=`curl 'https://api.ipify.org'`
+
 # Any files?
 if ls $thePath &>/dev/null; then
       
@@ -21,7 +24,7 @@ for filename in $thePath; do
 	SensorId=`ls $filename|cut -f6 -d'/'`
 
 	# Save data
-	wget -q -O/dev/null "http://www.doglogg.se/doglogg_save.php?id=$SensorId&data=$OutsideTemp&user=$cpuSerialNo-$hwRevision"
+	wget -q -O/dev/null "http://www.doglogg.se/doglogg_save.php?id=$SensorId&data=$OutsideTemp&user=$cpuSerialNo-$hwRevision&ip=$ipaddress"
 
        # wget -q -O/dev/null  "http://api.thingspeak.com/update?api_key=RKDFIP1P1VM72FE7&field1=$OutsideTemp&field2=$SensorId"
 
