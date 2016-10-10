@@ -26,7 +26,7 @@ for filename in $thePath; do
 	# Save data
 	wget -q -O/dev/null "http://www.doglogg.se/doglogg_save.php?id=$SensorId&data=$OutsideTemp&user=$cpuSerialNo-$hwRevision&ip=$ipaddress"
 
-       # wget -q -O/dev/null  "http://api.thingspeak.com/update?api_key=RKDFIP1P1VM72FE7&field1=$OutsideTemp&field2=$SensorId"
+    wget -q -O/dev/null  "http://api.thingspeak.com/update?api_key=RKDFIP1P1VM72FE7&field1=$OutsideTemp&field2=$SensorId"
 
 	# Just for the cause
 	echo $SensorId  $OutsideTemp
