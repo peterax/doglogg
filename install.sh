@@ -16,8 +16,9 @@ echo "network={" >> wpa_supplicant.conf
 echo "        key_mgmt=NONE" >> wpa_supplicant.conf
 echo "       priority=-999" >> wpa_supplicant.conf
 echo "}" >> wpa_supplicant.conf
-sudo cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
-#rm wpa_supplicant.conf
+cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+rm wpa_supplicant.conf
+
 
 
 git config --global user.email "peter@reducks.se"
