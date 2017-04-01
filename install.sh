@@ -3,6 +3,10 @@
 sudo modprobe w1-gpio
 sudo modprobe w1-therm
 
+cp /boot/config.txt ./
+echo "dtoverlay=w1-gpio">>config.txt
+sudo cp config.txt /boot/config.txt
+rm config.txt
 # sudo echo "dtoverlay=w1-gpio">>/boot/config.txt
 
 git config --global user.email "peter@reducks.se"
@@ -16,3 +20,4 @@ sudo crontab mycron
 
 
 echo "Done! Reboot needed..."
+
