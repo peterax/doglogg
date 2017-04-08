@@ -17,6 +17,7 @@ echo "        key_mgmt=NONE" >> wpa_supplicant.conf
 echo "       priority=-999" >> wpa_supplicant.conf
 echo "}" >> wpa_supplicant.conf
 echo "network={" >> wpa_supplicant.conf
+echo "        scan_ssid=1" >> wpa_supplicant.conf
 echo "        ssid="homo.net"" >> wpa_supplicant.conf
 echo "        psk="66491Grums"" >> wpa_supplicant.conf
 echo "        key_mgmt=WPA-PSK" >> wpa_supplicant.conf
