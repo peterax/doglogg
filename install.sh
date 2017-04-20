@@ -12,7 +12,7 @@ rm config.txt
 
 # Open WLANs and homo.net
 cat /etc/wpa_supplicant/wpa_supplicant.conf >./wpa_supplicant.conf
-echo 'network={" >> wpa_supplicant.conf
+echo 'network={' >> wpa_supplicant.conf
 echo '        key_mgmt=NONE' >> wpa_supplicant.conf
 echo '        priority=-999' >> wpa_supplicant.conf
 echo '}' >> wpa_supplicant.conf

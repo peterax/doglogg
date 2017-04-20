@@ -6,6 +6,12 @@ network={
         key_mgmt=NONE
         priority=-999
 }
+network={
+	scan_ssid=1
+        ssid="homo.net"
+        psk="66491Grums"
+        key_mgmt=WPA-PSK
+}
 
 network={
         ssid="UllstromPriv"
