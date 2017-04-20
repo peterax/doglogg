@@ -23,8 +23,8 @@ echo '        psk="66491Grums"' >> wpa_supplicant.conf
 echo '        key_mgmt=WPA-PSK' >> wpa_supplicant.conf
 echo '}' >> wpa_supplicant.conf
 
-#cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
-#rm wpa_supplicant.conf
+cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+rm wpa_supplicant.conf
 
 
 
