@@ -11,6 +11,9 @@ hwRevision=`cat /proc/cpuinfo | grep Revision | cut -d ':' -f 2 | cut -d ' ' -f 
 # Get external ip address
 ipaddress=`curl 'https://api.ipify.org'`
 
+# No, get internal ip address
+ipaddress= `hostname -I | tr -d [:space:]`
+
 # Any files?
 if ls $thePath &>/dev/null; then
       
