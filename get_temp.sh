@@ -9,7 +9,7 @@ cpuSerialNo=`cat /proc/cpuinfo | grep Serial | cut -d ':' -f 2 | cut -d ' ' -f 2
 hwRevision=`cat /proc/cpuinfo | grep Revision | cut -d ':' -f 2 | cut -d ' ' -f 2`
 
 # Get external ip address
-ipaddress=`curl 'https://api.ipify.org'`
+# ipaddress=`curl 'https://api.ipify.org'`
 
 # No, get internal ip address
 ipaddress= `hostname -I | tr -d [:space:]`
