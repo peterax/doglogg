@@ -31,6 +31,10 @@ for filename in $thePath; do
 
 	# Thingspeak, just for test
     # wget -q -O/dev/null  "http://api.thingspeak.com/update?api_key=RKDFIP1P1VM72FE7&field1=$OutsideTemp&field2=$SensorId"
+	
+	# Publish to MQTT
+	mosquitto_pub -h broker.hivemq.com -t doglogg/$SensorId -m $OutsideTemp
+	
 
 	# Just for the cause
 	echo $SensorId  $OutsideTemp
