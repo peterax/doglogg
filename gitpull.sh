@@ -11,5 +11,4 @@ git pull --no-edit
 sudo chmod 600 id_rsa
 ./phonehome.sh
 
-sudo apt -y install mosquitto
 sudo apt -y install mosquitto-clients
