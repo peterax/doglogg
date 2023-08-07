@@ -13,7 +13,7 @@ hwRevision=`cat /proc/cpuinfo | grep Revision | cut -d ':' -f 2 | cut -d ' ' -f 
 
 # No, get internal ip address
 # ipaddress=`hostname -I | tr -d [:space:]`
-ipaddress = `hostname -I | awk '{print $1}'`
+ipaddress=`hostname -I | awk '{print $1}'`
 # Any files?
 if ls $thePath &>/dev/null; then
       
